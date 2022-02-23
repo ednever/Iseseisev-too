@@ -33,28 +33,21 @@ namespace Iseseisev_too
             //Console.WriteLine($"Esinemisprotsent sümboli {symbol} on {protsent}%");
 
             //2 ülesanne
-
-            //int n = int.Parse(Console.ReadLine());
-            //Random rnd = new Random();
-            //for (int stroka = 0; stroka < 10; stroka++)
-            //{
-            //    for (int rjad = 0; rjad < 10; rjad++)
-            //    {
-            //        Console.Write("\t" + rnd.Next(1, 100));
-            //    }
-            //    Console.WriteLine();
-            //}
-
             Random rnd = new Random();
-            int[] tabel = new int[100];
+            List<int> tabel = new List<int>();
             for (int stroka = 1; stroka < 11; stroka++)
             {
                 for (int rjad = 1; rjad < 11; rjad++)
                 {
-                    tabel[rjad] = rnd.Next(1, 100);
-                    Console.Write($"{rnd.Next(1, 100),4}");
+                    int a = rnd.Next(1, 100);
+                    tabel.Add(a);
+                    Console.Write($"{a,4}");
                 }
                 Console.WriteLine();
+            }
+            foreach (int number in tabel)
+            {
+                Console.Write(number + " ");
             }
 
 
