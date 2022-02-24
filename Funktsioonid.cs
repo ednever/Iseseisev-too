@@ -8,14 +8,15 @@ namespace Iseseisev_too
 {
     public class Funktsioonid
     {
-        //public static int[] Arvud_Massiiviisse(int n)
-        //{
-        //    Random rnd = new Random();
-        //    int[] arvud = new int[n];
-        //    for (int i = 0; i < n; i++)
-        //    {
-        //        arvud[i] = rnd.Next(1, 100);
-        //    }
-        //}
+        public static int[] Arvud_Massiiviisse(int n)
+        {
+            Random rnd = new Random();
+            int[] arvud = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arvud[i] = rnd.Next(1, 100);
+            }
+            return arvud;
+        }
     }
 }

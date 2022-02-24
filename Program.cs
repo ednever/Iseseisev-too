@@ -27,34 +27,71 @@ namespace Iseseisev_too
             //        counter++;
             //    }
             //}
-            //double pikkusDouble = Convert.ToDouble(line.Length);
-            //double counterDouble = Convert.ToDouble(counter);
-            //double protsent = (counterDouble / pikkusDouble) * 100;
-            //Console.WriteLine($"Esinemisprotsent sümboli {symbol} on {protsent}%");
+            //double protsent = (Convert.ToDouble(counter) / Convert.ToDouble(line.Length)) * 100;
+            //Console.WriteLine($"Esinemisprotsent sümboli {symbol} on {Math.Round(protsent,2)}%");
 
             //2 ülesanne
-            Random rnd = new Random();
-            List<int> tabel = new List<int>();
-            for (int stroka = 1; stroka < 11; stroka++)
+            //int[,] tabel = new int[10, 10];
+            //int max = tabel[0, 0];
+            //Random rnd = new Random();
+            //for (int i = 0; i < tabel.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < tabel.GetLength(0); j++)
+            //    {
+            //        tabel[i, j] = rnd.Next(1,5);
+            //        Console.Write(tabel[i, j] + "  ");
+            //        if (i == j)
+            //        {
+            //            if (max < tabel[i, j])
+            //            {
+            //                max = tabel[i, j];
+            //            }
+            //        }
+            //    }
+            //    Console.WriteLine();
+            //}            
+            //Console.WriteLine("Elementide summa ridades:");
+            //for (int y = 0; y < tabel.GetLength(0); y++)
+            //{
+            //    int summa = 0;
+            //    for (int x = 0; x < tabel.GetLength(0); x++)
+            //        summa += tabel[y, x];
+            //    Console.Write(y + 1 + " >>> " + summa + ", ");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Elementide korrutis veergudes:");
+            //for (int x = 0; x < tabel.GetLength(0); x++)
+            //{
+            //    int korrutis = 1;
+            //    for (int y = 0; y < tabel.GetLength(0); y++)
+            //        korrutis *= tabel[y, x];
+            //    Console.Write(x + 1 + " >>> " + korrutis + ", ");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Maksimaalene element pea diagonaalis >>> " + max);
+
+
+            //3 ülesanne (pole lõpuni tehtud)
+            Console.WriteLine("Kui palju hinne perioodis?");
+            int a = int.Parse(Console.ReadLine());
+            int[] M = new int[a];
+            int summa = 0;
+            for (int i = 0; i < M.Length; i++)
             {
-                for (int rjad = 1; rjad < 11; rjad++)
-                {
-                    int a = rnd.Next(1, 100);
-                    tabel.Add(a);
-                    Console.Write($"{a,4}");
-                }
-                Console.WriteLine();
+                M[i] = int.Parse(Console.ReadLine());
             }
-            foreach (int number in tabel)
+            foreach (int number in M)
             {
-                Console.Write(number + " ");
+                summa += number;
             }
-
-
-
-            //3 ülesanne
-            //string[] markid = new string[5];
-            //string[,] arr2d = new string[3, 1] { { "Name-surname" }, { "Grupp" }, { markid } };
+            if (summa / M.Length >= 4)
+            {
+                Console.WriteLine("stipendium");
+            }
+            else
+            {
+                Console.WriteLine("mitte");
+            }
 
             Console.ReadLine();
         }
