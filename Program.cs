@@ -28,7 +28,7 @@ namespace Iseseisev_too
             //    }
             //}
             //double protsent = (Convert.ToDouble(counter) / Convert.ToDouble(line.Length)) * 100;
-            //Console.WriteLine($"Esinemisprotsent sümboli {symbol} on {Math.Round(protsent,2)}%");
+            //Console.WriteLine($"Esinemisprotsent sümboli {symbol} on {Math.Round(protsent, 2)}%");
 
             //2 ülesanne
             //int[,] tabel = new int[10, 10];
@@ -38,7 +38,7 @@ namespace Iseseisev_too
             //{
             //    for (int j = 0; j < tabel.GetLength(0); j++)
             //    {
-            //        tabel[i, j] = rnd.Next(1,5);
+            //        tabel[i, j] = rnd.Next(1, 5);
             //        Console.Write(tabel[i, j] + "  ");
             //        if (i == j)
             //        {
@@ -49,7 +49,7 @@ namespace Iseseisev_too
             //        }
             //    }
             //    Console.WriteLine();
-            //}            
+            //}
             //Console.WriteLine("Elementide summa ridades:");
             //for (int y = 0; y < tabel.GetLength(0); y++)
             //{
@@ -72,26 +72,32 @@ namespace Iseseisev_too
 
 
             //3 ülesanne (pole lõpuni tehtud)
-            Console.WriteLine("Kui palju hinne perioodis?");
-            int a = int.Parse(Console.ReadLine());
-            int[] M = new int[a];
-            int summa = 0;
-            for (int i = 0; i < M.Length; i++)
-            {
-                M[i] = int.Parse(Console.ReadLine());
-            }
-            foreach (int number in M)
-            {
-                summa += number;
-            }
-            if (summa / M.Length >= 4)
-            {
-                Console.WriteLine("stipendium");
-            }
-            else
-            {
-                Console.WriteLine("mitte");
-            }
+            //string[,] inimene = new string[3, 2];
+            //Console.WriteLine("Kirjutage nimi, perekonnanimi, grupp");
+            //inimene[1, 1] = Console.ReadLine();
+            //inimene[1, 1] = Console.ReadLine();
+            //inimene[1, 1] = Console.ReadLine();
+            //Console.WriteLine("Kui palju hinne perioodis?");
+            //int a = int.Parse(Console.ReadLine());
+            //int[] M = new int[a];
+            //int summa = 0;
+            //Console.WriteLine("Kirjuta oma hinned");
+            //for (int i = 0; i < M.Length; i++)
+            //{
+            //    M[i] = int.Parse(Console.ReadLine());
+            //}
+            //foreach (int number in M)
+            //{
+            //    summa += number;
+            //}
+            //if (summa / M.Length >= 4)
+            //{
+            //    Console.WriteLine("stipendium");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("mitte");
+            //}
 
             Console.ReadLine();
         }
